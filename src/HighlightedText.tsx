@@ -78,9 +78,6 @@ const HighlightedText = ({
             }
           });
         }
-        if (keyword) {
-          return keyword;
-        }
         if (hashtagRegexTester.test(chunk)) {
           return (
             <TouchableWithoutFeedback
@@ -120,6 +117,9 @@ const HighlightedText = ({
               <Text style={linkStyle}>{chunk}</Text>
             </TouchableWithoutFeedback>
           );
+        }
+        if (keyword) {
+          return keyword;
         }
         return <Text key={index}>{chunk}</Text>;
       })}

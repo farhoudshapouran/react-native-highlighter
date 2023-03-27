@@ -11,10 +11,25 @@ it('Check the input is a Mention', () => {
 
 it('Check the input is a Hashtag', () => {
   expect(hashtagRegexTester.test('#test')).toBeTruthy();
+});
+
+it('Check the input is a Hashtag', () => {
   expect(hashtagRegexTester.test('#şikayet')).toBeTruthy();
+});
+
+it('Check the input is a Hashtag', () => {
   expect(hashtagRegexTester.test('تست#')).toBeTruthy();
+});
+
+it('Check the input is a Hashtag', () => {
   expect(hashtagRegexTester.test('#测试')).toBeTruthy();
+});
+
+it('Check the input is a Hashtag', () => {
   expect(hashtagRegexTester.test('#тест')).toBeTruthy();
+});
+
+it('Check the input is a Hashtag', () => {
   expect(hashtagRegexTester.test('#prüfen')).toBeTruthy();
 });
 
