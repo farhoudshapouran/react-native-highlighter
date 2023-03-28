@@ -91,9 +91,7 @@ For more please visit https://reactnative.dev or read latest posts from @reactna
 }
 
 const styles = StyleSheet.create({
-  hashtagStyle: {
-    color: '#F54291',
-  },
+  hashtagStyle: { color: '#F54291' },
   mentionStyle: { color: '#379237', fontWeight: 'bold' },
   emailStyle: { color: '#FF6D28', fontWeight: 'bold' },
 });
