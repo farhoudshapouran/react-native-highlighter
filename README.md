@@ -16,9 +16,37 @@ OR
 yarn add react-native-highlighter
 ```
 
-## Usage
+## Basic Usage
 
 ```js
+import HighlightedText, { Highlight } from 'react-native-highlighter';
+
+export default function App() {
+  const text = `React Native combines the best parts of native development with React, a best-in-class JavaScript library for building user interfaces. You can use React Native today in your existing Android and iOS projects or you can create a whole new app from scratch.`;
+
+  const mainKeywords = new Highlight({
+    keywords: ['react native', 'javascript'],
+    style: { color: '#6C00FF', fontWeight: 'bold' },
+  });
+
+  const extraMarkers = new Highlight({
+    keywords: ['user interface', 'highlight'],
+    style: { backgroundColor: '#F7DB6A' },
+  });
+
+  return (
+    <HighlightedText highlights={[mainKeywords, extraMarkers]}>
+      {text}
+    </HighlightedText>
+  );
+}
+// ...
+```
+
+## Complex Example
+
+```js
+import { Linking } from 'react-native';
 import HighlightedText, { Highlight } from 'react-native-highlighter';
 
 export default function App() {
@@ -43,6 +71,7 @@ For more please visit https://reactnative.dev or read latest posts from @reactna
   return (
     <HighlightedText
       highlights={[mainKeywords, extraMarkers]}
+      caseSensitive={false}
       hashtags={true}
       hashtagStyle={styles.hashtagStyle}
       mentions={true}
@@ -51,8 +80,10 @@ For more please visit https://reactnative.dev or read latest posts from @reactna
       emailStyle={styles.emailStyle}
       links={true}
       onMentionPress={(mention) =>
-        Alert.alert(`https://twitter.com/${mention.replace('@', '')}`)
+        Linking.openURL(`https://twitter.com/${mention.replace('@', '')}`)
       }
+      onEmailPress={(email) => Linking.openURL(`mailto:${email}`)}
+      onLinkPress={(url) => Linking.openURL(url)}
     >
       {text}
     </HighlightedText>
