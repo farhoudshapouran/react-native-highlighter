@@ -46,7 +46,7 @@ export default function App() {
 ## Complex Example
 
 ```js
-import { Linking } from 'react-native';
+import { StyleSheet, Linking } from 'react-native';
 import HighlightedText, { Highlight } from 'react-native-highlighter';
 
 export default function App() {
