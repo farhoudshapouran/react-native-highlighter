@@ -58,7 +58,7 @@ const HighlightedText = ({
   return (
     <Text {...props}>
       {chunks.map((chunk, index) => {
-        let keyword = null;
+        let keyword: Element | null = null;
         if (highlights) {
           highlights.map((item) => {
             const itemRegex = new RegExp(
@@ -78,7 +78,7 @@ const HighlightedText = ({
             }
           });
         }
-        if (hashtagRegexTester.test(chunk)) {
+        if (hashtags && hashtagRegexTester.test(chunk)) {
           return (
             <TouchableWithoutFeedback
               key={index}
@@ -88,7 +88,7 @@ const HighlightedText = ({
             </TouchableWithoutFeedback>
           );
         }
-        if (mentionRegexTester.test(chunk)) {
+        if (mentions && mentionRegexTester.test(chunk)) {
           return (
             <TouchableWithoutFeedback
               key={index}
@@ -98,7 +98,7 @@ const HighlightedText = ({
             </TouchableWithoutFeedback>
           );
         }
-        if (emailRegexTester.test(chunk)) {
+        if (emails && emailRegexTester.test(chunk)) {
           return (
             <TouchableWithoutFeedback
               key={index}
@@ -108,7 +108,7 @@ const HighlightedText = ({
             </TouchableWithoutFeedback>
           );
         }
-        if (urlRegexTester.test(chunk)) {
+        if (links && urlRegexTester.test(chunk)) {
           return (
             <TouchableWithoutFeedback
               key={index}

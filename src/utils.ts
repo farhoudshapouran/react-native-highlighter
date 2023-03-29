@@ -56,9 +56,12 @@ export const splitText = ({
     caseSensitive ? 'gm' : 'gmi'
   );
 
-  const parts = text
-    ? text.split(finalRegex).filter((i) => i !== undefined && i !== '')
-    : [];
+  const parts =
+    text && highlightRegex.length > 0
+      ? text.split(finalRegex).filter((i) => i !== undefined && i !== '')
+      : text
+      ? [text]
+      : [];
   return parts;
 };
 
