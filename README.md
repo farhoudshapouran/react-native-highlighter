@@ -101,10 +101,9 @@ const styles = StyleSheet.create({
 ## Available props
 
 
-| Name                     | Type            |   Default       | Description                                                                            |
-| ------------------------ | --------------- | --------------- | -------------------------------------------------------------------------------------- 
-|
-| value                    | `Highlight[]`   | `null`          | Array of Highlight object                                              
+| Name                     | Type            |   Default       | Description                                                                |
+| ------------------------ | --------------- | --------------- | ---------------------------------------------------------------------------|
+| value                    | `Highlight[]`   | `null`          | Array of Highlight object                                                  |
 
 
 ## Contributing
