@@ -101,9 +101,23 @@ const styles = StyleSheet.create({
 ## Available props
 
 
-| Name                     | Type            |   Default       | Description                                                                |
-| ------------------------ | --------------- | --------------- | ---------------------------------------------------------------------------|
-| value                    | `Highlight[]`   | `null`          | Array of Highlight object                                                  |
+| Name                     | Type            |   Default           | Description                                                                |
+| ------------------------ | --------------- | ------------------- | ---------------------------------------------------------------------------|
+| highlights               | `Highlight[]`   | `null`              | Array of Highlight object                                                  |
+| caseSensitive            | `boolean`       | `false`             | Defines that uppercase and lowercase letters are treated as distinct       |    
+| hashtags                 | `boolean`       | `false`             |  |
+| hashtagStyle             | `TextStyle`     | `{ color: 'blue' }` | |
+| onHashtagPress           | `func`          | `() => {}`          | |
+| mentions                 | `boolean`       | `false`             | |
+| mentionStyle             | `TextStyle`     | `{ color: 'blue' }` | |
+| onMentionPress           | `func`          | `() => {}`          | |
+| emails                   | `boolean`       | `false`             | |
+| emailStyle               | `TextStyle`     | `{ color: 'blue' }` | |
+| onEmailPress             | `func`          | `() => {}`          | |
+| links                    | `boolean`       | `false`             | |
+| linkStyle                | `TextStyle`     | `{ color: 'blue' }` | |
+| onLinkPress              | `func`          | `() => {}`          | |
+
 
 
 ## Contributing
