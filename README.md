@@ -107,10 +107,10 @@ const styles = StyleSheet.create({
 | caseSensitive            | `boolean`       | `false`             | Defines that uppercase and lowercase letters are treated as distinct       |    
 | hashtags                 | `boolean`       | `false`             | Defines that all hashtags within the text are specified                    |
 | hashtagStyle             | `TextStyle`     | `{ color: 'blue' }` | Defines the style of hashtags |
-| onHashtagPress           | `func`          | `() => {}`          | Defines what action to take when pressing on the hashtag |
-| mentions                 | `boolean`       | `false`             | |
-| mentionStyle             | `TextStyle`     | `{ color: 'blue' }` | |
-| onMentionPress           | `func`          | `() => {}`          | |
+| onHashtagPress           | `func`          | `() => {}`          | Defines what action to take when pressing on the hashtags |
+| mentions                 | `boolean`       | `false`             | Defines that all mentions within the text are specified |
+| mentionStyle             | `TextStyle`     | `{ color: 'blue' }` | Defines the style of mentions |
+| onMentionPress           | `func`          | `() => {}`          | Defines what action to take when pressing on the mentions |
 | emails                   | `boolean`       | `false`             | |
 | emailStyle               | `TextStyle`     | `{ color: 'blue' }` | |
 | onEmailPress             | `func`          | `() => {}`          | |
