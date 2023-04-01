@@ -105,9 +105,9 @@ const styles = StyleSheet.create({
 | ------------------------ | --------------- | ------------------- | ---------------------------------------------------------------------------|
 | highlights               | `Highlight[]`   | `null`              | Array of Highlight object                                                  |
 | caseSensitive            | `boolean`       | `false`             | Defines that uppercase and lowercase letters are treated as distinct       |    
-| hashtags                 | `boolean`       | `false`             |  |
-| hashtagStyle             | `TextStyle`     | `{ color: 'blue' }` | |
-| onHashtagPress           | `func`          | `() => {}`          | |
+| hashtags                 | `boolean`       | `false`             | Defines that all hashtags within the text are specified                    |
+| hashtagStyle             | `TextStyle`     | `{ color: 'blue' }` | Defines the style of hashtags |
+| onHashtagPress           | `func`          | `() => {}`          | Defines what action to take when pressing on the hashtag |
 | mentions                 | `boolean`       | `false`             | |
 | mentionStyle             | `TextStyle`     | `{ color: 'blue' }` | |
 | onMentionPress           | `func`          | `() => {}`          | |
