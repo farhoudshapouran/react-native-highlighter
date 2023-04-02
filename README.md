@@ -111,9 +111,9 @@ const styles = StyleSheet.create({
 | mentions                 | `boolean`       | `false`             | Defines that all mentions within the text are specified |
 | mentionStyle             | `TextStyle`     | `{ color: 'blue' }` | Defines the style of mentions |
 | onMentionPress           | `func`          | `() => {}`          | Defines what action to take when pressing on the mentions |
-| emails                   | `boolean`       | `false`             | |
-| emailStyle               | `TextStyle`     | `{ color: 'blue' }` | |
-| onEmailPress             | `func`          | `() => {}`          | |
+| emails                   | `boolean`       | `false`             | Defines that all emails within the text are specified |
+| emailStyle               | `TextStyle`     | `{ color: 'blue' }` | Defines the style of emails |
+| onEmailPress             | `func`          | `() => {}`          | Defines what action to take when pressing on the emails |
 | links                    | `boolean`       | `false`             | |
 | linkStyle                | `TextStyle`     | `{ color: 'blue' }` | |
 | onLinkPress              | `func`          | `() => {}`          | |
