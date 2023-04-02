@@ -114,9 +114,9 @@ const styles = StyleSheet.create({
 | emails                   | `boolean`       | `false`             | Defines that all emails within the text are specified |
 | emailStyle               | `TextStyle`     | `{ color: 'blue' }` | Defines the style of emails |
 | onEmailPress             | `func`          | `() => {}`          | Defines what action to take when pressing on the emails |
-| links                    | `boolean`       | `false`             | |
-| linkStyle                | `TextStyle`     | `{ color: 'blue' }` | |
-| onLinkPress              | `func`          | `() => {}`          | |
+| links                    | `boolean`       | `false`             | Defines that all links within the text are specified |
+| linkStyle                | `TextStyle`     | `{ color: 'blue' }` | Defines the style of links |
+| onLinkPress              | `func`          | `() => {}`          | Defines what action to take when pressing on the links |
 
 
 
