@@ -43,7 +43,7 @@ export default function App() {
 // ...
 ```
 
-## Complex Example
+## Full Example
 
 ```js
 import { StyleSheet, Linking } from 'react-native';
@@ -76,13 +76,13 @@ For more please visit https://reactnative.dev or read latest posts from @reactna
       hashtagStyle={styles.hashtagStyle}
       mentions={true}
       mentionStyle={styles.mentionStyle}
-      emails={true}
-      emailStyle={styles.emailStyle}
-      links={true}
       onMentionPress={(mention) =>
         Linking.openURL(`https://twitter.com/${mention.replace('@', '')}`)
       }
+      emails={true}
+      emailStyle={styles.emailStyle}
       onEmailPress={(email) => Linking.openURL(`mailto:${email}`)}
+      links={true}
       onLinkPress={(url) => Linking.openURL(url)}
     >
       {text}
