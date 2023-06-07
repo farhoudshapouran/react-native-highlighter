@@ -61,12 +61,15 @@ const HighlightedText = ({
         let keyword: Element | null = null;
         if (highlights) {
           highlights.map((item) => {
-            const itemRegex = new RegExp(
-              `^${item.regexSource.join('|')}$`,
-              caseSensitive ? 'gm' : 'gmi'
-            );
+            const itemRegex =
+              item.regexSource.length > 0
+                ? new RegExp(
+                    `^${item.regexSource.join('|')}$`,
+                    caseSensitive ? 'gm' : 'gmi'
+                  )
+                : null;
 
-            if (itemRegex.test(chunk)) {
+            if (itemRegex && itemRegex.test(chunk)) {
               keyword = (
                 <TouchableWithoutFeedback
                   key={index}
@@ -79,6 +82,7 @@ const HighlightedText = ({
           });
         }
         if (hashtags && hashtagRegexTester.test(chunk)) {
+          console.log('1111111' + chunk);
           return (
             <TouchableWithoutFeedback
               key={index}
