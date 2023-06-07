@@ -43,7 +43,7 @@ export default function App() {
 // ...
 ```
 
-## Complex Example
+## Full Example
 
 ```js
 import { StyleSheet, Linking } from 'react-native';
@@ -76,13 +76,13 @@ For more please visit https://reactnative.dev or read latest posts from @reactna
       hashtagStyle={styles.hashtagStyle}
       mentions={true}
       mentionStyle={styles.mentionStyle}
-      emails={true}
-      emailStyle={styles.emailStyle}
-      links={true}
       onMentionPress={(mention) =>
         Linking.openURL(`https://twitter.com/${mention.replace('@', '')}`)
       }
+      emails={true}
+      emailStyle={styles.emailStyle}
       onEmailPress={(email) => Linking.openURL(`mailto:${email}`)}
+      links={true}
       onLinkPress={(url) => Linking.openURL(url)}
     >
       {text}
@@ -97,6 +97,29 @@ const styles = StyleSheet.create({
 });
 // ...
 ```
+
+## Available props
+
+
+| Name                     | Type            |   Default           | Description                                                                |
+| ------------------------ | --------------- | ------------------- | ---------------------------------------------------------------------------|
+| highlights               | `Highlight[]`   | `null`              | Array of Highlight object                                                  |
+| caseSensitive            | `boolean`       | `false`             | Defines that uppercase and lowercase letters are treated as distinct       |    
+| style                    | `TextStyle`     | `null`              | Defines the style of text |
+| hashtags                 | `boolean`       | `false`             | Defines that all hashtags within the text are specified                    |
+| hashtagStyle             | `TextStyle`     | `{ color: 'blue' }` | Defines the style of hashtags |
+| onHashtagPress           | `func`          | `() => {}`          | Defines what action to take when pressing on the hashtags |
+| mentions                 | `boolean`       | `false`             | Defines that all mentions within the text are specified |
+| mentionStyle             | `TextStyle`     | `{ color: 'blue' }` | Defines the style of mentions |
+| onMentionPress           | `func`          | `() => {}`          | Defines what action to take when pressing on the mentions |
+| emails                   | `boolean`       | `false`             | Defines that all emails within the text are specified |
+| emailStyle               | `TextStyle`     | `{ color: 'blue' }` | Defines the style of emails |
+| onEmailPress             | `func`          | `() => {}`          | Defines what action to take when pressing on the emails |
+| links                    | `boolean`       | `false`             | Defines that all links within the text are specified |
+| linkStyle                | `TextStyle`     | `{ color: 'blue' }` | Defines the style of links |
+| onLinkPress              | `func`          | `() => {}`          | Defines what action to take when pressing on the links |
+
+
 
 ## Contributing
 
