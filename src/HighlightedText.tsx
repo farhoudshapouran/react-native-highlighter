@@ -82,7 +82,6 @@ const HighlightedText = ({
           });
         }
         if (hashtags && hashtagRegexTester.test(chunk)) {
-          console.log('1111111' + chunk);
           return (
             <TouchableWithoutFeedback
               key={index}
