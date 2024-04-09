@@ -31,7 +31,7 @@ export default function App() {
   const text = `React Native combines the best parts of native development with React, a best-in-class JavaScript library for building user interfaces.
 Use a little—or a lot. You can use React Native today in your existing Android and iOS projects or you can create a whole new app from scratch.
 For more please visit https://reactnative.dev or read latest posts from @reactnative.
-If you have any question about highlighter please feel free to send me mail at shapouran@gmail.com.
+If you have any question about highlighter please feel free https://google.us.edi?34535/534534?dfg=g&fg to send me mail at shapouran@gmail.com [gskinner.com/products/spl] www.meydandental.com  gskinner.com.tr.
 
 #react #reactnative #javascript`;
 
